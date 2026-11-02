@@ -78,6 +78,10 @@ details.job .body strong{color:var(--ink)}
 .voice q:lang(en){quotes:"“" "”"}
 .voice .who{margin-top:14px;font-size:.9rem}
 
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.role{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:6px;padding:20px}
+.role h3{font-family:var(--serif);font-size:1.2rem;margin:0 0 8px}
+.role p{margin:0;color:var(--muted)}
 .geo{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:28px}
 .geo dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:10px 24px}
 .geo dt{font-weight:600}
@@ -100,7 +104,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     <span class="brand" data-en="Breaking into the trading floor">Entrer en salle des marchés</span>
     <div class="right">
       <nav aria-label="Navigation">
-        <a href="#metiers" data-en="Desks">Métiers</a>
+        <a href="#desks" data-en="Desks">Desks</a>
+        <a href="#metiers" data-en="Jobs">Métiers</a>
         <a href="#voix" data-en="Advice">Conseils</a>
         <a href="#geopolitique" data-en="Geopolitics">Géopolitique</a>
         <a href="#contribuer" data-en="Contribute">Contribuer</a>
@@ -138,40 +143,46 @@ footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);f
     </div>
   </div>
 
-  <section id="metiers">
-    <h2 data-en="Desks">Les métiers</h2>
-    <p class="sub" data-en="On the sell side, these desks are grouped under the label FICC: Fixed Income, Currencies, Commodities. A short definition of each, to be refined with what practitioners tell me.">Au sell side, ces desks sont regroupés sous le sigle FICC : Fixed Income, Currencies, Commodities. Une définition courte de chacun, à affiner avec ce que disent les professionnels.</p>
+  <section id="desks">
+    <h2 data-en="Desks">Les desks</h2>
+    <p class="sub" data-en="On the sell side, these desks are grouped under the label FICC: Fixed Income, Currencies, Commodities. Each is defined briefly below.">Au sell side, ces desks sont regroupés sous le sigle FICC : Fixed Income, Currencies, Commodities. Chacun est défini brièvement ci-dessous.</p>
 
     <details class="job">
       <summary>Fixed Income</summary>
-      <div class="body"><p data-en="The family of debt products: government and corporate bonds, interest-rate and credit products. Rates and Credit below are its two core desks.">La famille des produits de dette : obligations d’États et d’entreprises, produits de taux et de crédit. Rates et Credit, ci-dessous, en sont les deux desks principaux.</p>
-      <p data-en="<strong>Skills to build:</strong> bond maths, understanding central banks, curiosity for macro."><strong>Compétences à développer :</strong> mathématiques obligataires, compréhension des banques centrales, goût pour la macro.</p></div>
+      <div class="body"><p data-en="Covers every product that pays a regular income, from government bonds such as US Treasuries to corporate bonds. Credit default swaps (CDS), derivatives that insure against an issuer’s default, are also traded on these desks. Debt from developed and emerging countries is often handled by separate desks.">Regroupe tous les produits qui versent un revenu régulier : des obligations d’États, comme les Treasuries américains, aux obligations d’entreprises. Les credit default swaps (CDS), des dérivés qui protègent contre le défaut d’un émetteur, se traitent aussi sur ces desks. La dette des pays développés et celle des pays émergents sont souvent gérées par des desks séparés.</p></div>
     </details>
     <details class="job">
-      <summary>Sales Rates</summary>
-      <div class="body"><p data-en="[TO COMPLETE] Sales advise investors (asset managers, hedge funds, insurers) on rates products: government bonds, swaps, derivatives. They link the client and the trader.">[À COMPLÉTER] Le Sales conseille les investisseurs (asset managers, hedge funds, assureurs) sur les produits de taux : obligations souveraines, swaps, dérivés. Il fait le lien entre le client et le trader.</p>
-      <p data-en="<strong>Skills to build:</strong> following central banks, clear communication, responsiveness."><strong>Compétences à développer :</strong> lecture des banques centrales, communication claire, réactivité.</p></div>
-    </details>
-    <details class="job">
-      <summary>FX</summary>
-      <div class="body"><p data-en="[TO COMPLETE] Currency markets: corporate and investor flows, hedging, reaction to political decisions and tensions between countries.">[À COMPLÉTER] Marché des changes : flux des entreprises et des investisseurs, couverture, réaction aux décisions politiques et aux tensions entre pays.</p>
-      <p data-en="<strong>Skills to build:</strong> macro, geopolitics, reading flows."><strong>Compétences à développer :</strong> macro, géopolitique, lecture des flux.</p></div>
+      <summary>Rates</summary>
+      <div class="body"><p data-en="Interest rates and government debt: sovereign bonds, interest-rate swaps and related derivatives. Prices move with central bank decisions, inflation and growth. Clients are asset managers, insurers, pension funds and hedge funds.">Taux d’intérêt et dette d’États : obligations souveraines, swaps de taux et dérivés associés. Les prix bougent avec les décisions des banques centrales, l’inflation et la croissance. Les clients sont des asset managers, des assureurs, des fonds de pension et des hedge funds.</p></div>
     </details>
     <details class="job">
       <summary>Credit</summary>
-      <div class="body"><p data-en="[TO COMPLETE] Corporate bonds and credit derivatives: default risk, spreads, primary and secondary markets.">[À COMPLÉTER] Obligations d’entreprises et dérivés de crédit : risque de défaut, spreads, primaire et secondaire.</p>
-      <p data-en="<strong>Skills to build:</strong> issuer analysis, reading financial statements."><strong>Compétences à développer :</strong> analyse d’émetteurs, lecture des documents financiers.</p></div>
+      <div class="body"><p data-en="Corporate debt: corporate bonds and credit derivatives. The price reflects the risk that the issuer does not repay, measured by the spread, the yield gap versus a government bond. The desk works on new issues (primary market) and on trading existing bonds (secondary market).">Dette des entreprises : obligations d’entreprises et dérivés de crédit. Le prix reflète le risque que l’émetteur ne rembourse pas, mesuré par le spread, l’écart de rendement avec un emprunt d’État. Le desk intervient à l’émission de nouvelles obligations (marché primaire) et dans l’échange des anciennes (marché secondaire).</p></div>
     </details>
     <details class="job">
-      <summary data-en="Emerging Markets / Macro">Emerging Markets / Macro</summary>
-      <div class="body"><p data-en="[TO COMPLETE] Emerging-market debt and currencies, highly sensitive to political risk, sanctions and commodity cycles.">[À COMPLÉTER] Dette et devises des pays émergents, très sensibles au risque politique, aux sanctions et aux cycles de matières premières.</p>
-      <p data-en="<strong>Skills to build:</strong> country analysis, following international news."><strong>Compétences à développer :</strong> analyse pays, suivi de l’actualité internationale.</p></div>
+      <summary>FX</summary>
+      <div class="body"><p data-en="The foreign exchange market is the largest financial market in the world, ahead of equities and bonds. Currencies are quoted in pairs, for example EUR/USD. It reacts strongly to interest rates, central banks and political tensions.">Le marché des changes est le plus grand marché financier du monde, devant les actions et les obligations. Les devises se cotent par paires, par exemple EUR/USD. Il réagit fortement aux taux d’intérêt, aux banques centrales et aux tensions politiques.</p></div>
     </details>
     <details class="job">
       <summary>Commodities</summary>
-      <div class="body"><p data-en="Oil, gas, metals and agricultural products. Clients are producers, industrial groups, traders and funds, who hedge or take views on prices. Prices react strongly to sanctions, conflicts, OPEC+ decisions and weather. How much banks offer here varies from one institution to another.">Pétrole, gaz, métaux et produits agricoles. Les clients sont des producteurs, des groupes industriels, des négociants et des fonds, qui se couvrent ou prennent une vue sur les prix. Les cours réagissent fortement aux sanctions, aux conflits, aux décisions de l’OPEP+ et à la météo. L’offre varie selon les banques.</p>
-      <p data-en="<strong>Skills to build:</strong> understanding physical supply chains, geopolitics, energy markets."><strong>Compétences à développer :</strong> compréhension des chaînes d’approvisionnement physiques, géopolitique, marchés de l’énergie.</p></div>
+      <div class="body"><p data-en="Raw materials, in two families: hard commodities (crude oil, gold, silver), which keep for a long time, and soft commodities (cocoa, coffee, soybeans, rice, wheat, corn), agricultural products with a short shelf life. Prices react to sanctions, conflicts and weather.">Matières premières, en deux familles : les hard commodities (pétrole, or, argent), qui se conservent longtemps, et les soft commodities (cacao, café, soja, riz, blé, maïs), des produits agricoles à courte durée de conservation. Les prix réagissent aux sanctions, aux conflits et à la météo.</p></div>
     </details>
+    <details class="job">
+      <summary>Emerging Markets / Macro</summary>
+      <div class="body"><p data-en="Debt and currencies of emerging countries: government bonds, local currencies and derivatives. Yields are often higher, but so is the risk: political instability, sanctions, commodity dependence, moves in the dollar. This desk is often separate from the one covering developed countries.">Dette et devises des pays émergents : obligations d’États, monnaies locales et dérivés. Les rendements sont souvent plus élevés, mais le risque aussi : instabilité politique, sanctions, dépendance aux matières premières, variations du dollar. Ce desk est souvent séparé de celui des pays développés.</p></div>
+    </details>
+  </section>
+
+  <section id="metiers">
+    <h2 data-en="Jobs on the trading floor">Les métiers de la salle de marché</h2>
+    <p class="sub" data-en="The same roles appear on most desks. Here is what each one does.">On retrouve les mêmes métiers sur la plupart des desks. Voici ce que fait chacun.</p>
+    <div class="roles">
+      <div class="role"><h3>Sales</h3><p data-en="The link with institutional clients: passes on market ideas, prices and the bank’s views, and relays their needs to the trader. In constant contact by phone and chat.">Interface avec les clients institutionnels : il leur transmet les idées de marché, les prix et les analyses de la banque, et remonte leurs besoins au trader. Il est en contact permanent, par téléphone et messagerie.</p></div>
+      <div class="role"><h3>Trader</h3><p data-en="Quotes prices, executes client orders and manages the bank’s positions. Decides fast and monitors risk continuously.">Cote les prix, exécute les ordres des clients et gère les positions de la banque. Il décide vite et suit le risque en continu.</p></div>
+      <div class="role"><h3>Structuring</h3><p data-en="Designs tailor-made products for a client, often derivatives, combining several instruments to meet a hedging or yield need. Works with Sales, traders and quants.">Conçoit des produits sur mesure pour un client, souvent des dérivés, en combinant plusieurs instruments pour répondre à un besoin de couverture ou de rendement. Il travaille avec les Sales, les traders et les quants.</p></div>
+      <div class="role"><h3>Quant</h3><p data-en="Builds the mathematical models for pricing and risk, as well as trading tools. A profile strong in maths, statistics and programming.">Construit les modèles mathématiques de valorisation et de risque, ainsi que des outils de trading. Le profil est très orienté mathématiques, statistiques et programmation.</p></div>
+      <div class="role"><h3>Research</h3><p data-en="Analyses the economy, markets or issuers and publishes notes and recommendations for clients and internal teams. Equity research covers stocks; in FICC, research is macro, rates or credit (strategists).">Analyse l’économie, les marchés ou les émetteurs, puis publie des notes et des recommandations pour les clients et les équipes. L’equity research couvre les actions ; en FICC, la recherche est macro, taux ou crédit (stratégistes).</p></div>
+    </div>
   </section>
 
   <section id="voix">
